@@ -1,0 +1,9 @@
+{
+    "todos": [
+      {
+          // optional dummy data
+          // include at least id, task, and status
+       }
+    ]
+  }
+  
