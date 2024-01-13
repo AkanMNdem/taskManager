@@ -26,6 +26,25 @@ export default function Home() {
     });
   }
 
+  const handleAddTask = async () => {
+    if (newTask.trim() !== '') {
+      const addedTask = await addTask(newTask);
+      setTasks((prevTasks) => [...prevTasks, addedTask]);
+      setNewTask('');
+    }
+  };
+
+  const handleDeleteTask = async (id) => {
+    await deleteTask(id)
+      .then(() => console.log(`Deleted task with id: ${taskId}`))
+      .catch((error) => console.error(`Error: ${error}`));;
+    setTasks((prevTasks) => {
+      return prevTasks.filter((task) => task.id !== id);
+    });
+  }
+
+
+
 
   return (
     <div className={raleway.className}>
