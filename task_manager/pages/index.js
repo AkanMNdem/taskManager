@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import Task from './task'
 import { Raleway } from 'next/font/google'
+import { useEffect } from 'react';
 import {getAllTodos, updateTask, addTask, updateTaskList, deleteTask} from './api/hello'
 const raleway = Raleway({
   weight: '400',
@@ -11,6 +13,17 @@ export default function Home() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
   const [percentageCompleted, setPercentageCompleted] = useState(0);
+
+  useEffect(() => {
+    const fetchTodos = async () => {
+      const allTodo = await getAllTodos();
+      setTasks(allTodo);
+      console.log(allTodo);
+    };
+
+    fetchTodos();
+  }, []);
+
 
   const handleTaskCompletion = (id) => {
     setTasks((prevTasks) => {
@@ -43,6 +56,17 @@ export default function Home() {
     });
   }
 
+  const calculatePercentageCompleted = async () => {
+    const completedTasksCount = tasks.filter((task) => task.status).length;
+    const totalTasksCount = tasks.length;
+    const percentage = (totalTasksCount > 0)
+      ? (completedTasksCount / totalTasksCount) * 100
+      : 0;
+    setPercentageCompleted(percentage);
+    for (let task of tasks) {
+      await updateTask(task);
+    }
+  }
 
 
 

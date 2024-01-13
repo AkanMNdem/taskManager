@@ -1,8 +1,10 @@
 {
     "todos": [
       {
-          // optional dummy data
-          // include at least id, task, and status
+          "id": 1,
+          "text": "Complete MLH React project",
+          "deadline": "2023-01-13",
+          "status": false
        }
     ]
   }
