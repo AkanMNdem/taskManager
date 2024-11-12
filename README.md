@@ -1,5 +1,3 @@
-I understand now, you want every single part, no matter how small, in Markdown format, even parts like “Navigate to the project directory.” I’ll redo everything precisely as requested.
-
 # Task Manager
 
 ## Overview
@@ -21,56 +19,55 @@ Task Manager is a dynamic web application designed for efficient task management
 - **Styles:** Uses Tailwind CSS for responsive and clean UI design.
 
 ## Getting Started
+
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/AkanMNdem/taskManager.git
+   ```
 
-	2.	Navigate to the project directory:
+2. **Navigate to the project directory:**
+   ```bash
+   cd taskManager
+   ```
 
-cd taskManager
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
+4. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
-	3.	Install dependencies:
+## How to Use
 
-npm install
+1. Open the application in your web browser at [http://localhost:3000](http://localhost:3000).
+2. Add a new task by typing into the input field and clicking **“Add Task.”**
+3. Update tasks by clicking the edit button next to a task.
+4. Delete tasks by clicking the delete button.
+5. Monitor your progress via the progress tracker, which updates as you complete tasks.
 
+## Contributing
 
-	4.	Start the development server:
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-name
+   ```
 
-npm run dev
+3. Commit your changes:
+   ```bash
+   git commit -m "Description of changes"
+   ```
 
+4. Push to the branch:
+   ```bash
+   git push origin feature-name
+   ```
 
+5. Open a pull request on GitHub.
 
-How to Use
-
-	1.	Open the application in your web browser at http://localhost:3000.
-	2.	Add a new task by typing into the input field and clicking “Add Task.”
-	3.	Update tasks by clicking the edit button next to a task.
-	4.	Delete tasks by clicking the delete button.
-	5.	Monitor your progress via the progress tracker, which updates as you complete tasks.
-
-Contributing
-
-	1.	Fork the repository.
-	2.	Create a new branch:
-
-git checkout -b feature-name
-
-
-	3.	Commit your changes:
-
-git commit -m "Description of changes"
-
-
-	4.	Push to the branch:
-
-git push origin feature-name
-
-
-	5.	Open a pull request on GitHub.
-
-License
+## License
 
 This project is licensed under the MIT License.
-
-This version ensures every line, instruction, and detail is formatted correctly for Markdown editors. Let me know if there’s anything else to refine!
